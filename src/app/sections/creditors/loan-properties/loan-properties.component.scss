@@ -1,0 +1,442 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+	content: ""; 
+	display: block;
+	margin-top: 3px; 
+	border-bottom: 3px solid blue; 
+}
+
+.page-title2:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 8px; 
+	padding-top: 0; 
+	border-bottom: 3px solid blue; 
+}
+
+// Line animation on mobile ------------------
+.page-title-mobile:after {
+	display: none;
+}
+
+.page-title2-mobile:after {
+	display: none;
+}
+
+// Section ------------------
+.main-container {
+	display:flex;
+	justify-content: center;
+	margin: 8% 0;
+	.row {
+		width: 80%;
+		// Text ------------------
+		.text {
+			width: 60%;
+		}
+	}
+}
+
+// Table ------------------
+.row-2 {
+	display: flex;
+	justify-content: center;
+	// Border ------------------
+	.box-border {
+		height: auto;
+		width: 40%;
+		border: solid #cfcfcf  1px;
+		border-radius: 35px;
+		padding: 2%;
+		margin-top: 3%;
+		.title-box {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 2%;
+			// Image------------------
+			.img-box {
+				width: 50px;
+				height: auto;
+				margin-right: 2%;
+			}
+			// Title ------------------
+			.title {
+				width: auto;
+				h4 {
+					@include tab-title;
+					font-weight: 700;
+				}
+			}
+
+		}
+	}
+}
+
+// Line exception on table half ------------------
+.bottom-border:nth-child(3) {
+	border:none;
+}
+
+// Line exception on table end ------------------
+.bottom-border:last-child {
+	border:none;
+}
+
+// Content ------------------
+.bottom-border {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom:solid #cfcfcf 1px;
+	margin: 0;
+	// Row------------------
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		margin: 3% 0;
+		// Columns ------------------
+		.col {
+			width: 33%;
+			display:flex;
+			justify-content: flex-start;
+			margin: 0 3%;
+		}
+	}
+}
+
+// Icons------------------
+.fas {
+	margin-right: 12px;
+	font-size: 20px;
+}
+
+.far {
+	margin-right: 12px;
+	font-size: 20px;
+}
+
+// Title + text ------------------
+h6 {
+	@include tab-title;
+}
+
+// Tooltip's position ------------------
+.tooltip-box1 {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	width: 230%;
+	height: auto;
+	position: absolute;
+	left: -410px;
+	bottom: 300%;
+	z-index: 2;
+	@include shadowElement;
+}
+
+.tooltip-box2 {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	width: 230%;
+	height: auto;
+	position: absolute;
+	left: 300%;
+	bottom: 300%;
+	z-index: 2;
+	@include shadowElement;
+}
+
+.tooltip-box3 {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 150%;
+	bottom: 300%;
+	z-index: 2;
+	padding: 0 0 5% 5%;
+	@include shadowElement;
+}
+
+// Tooltip ------------------
+.tooltip-box {
+	border: solid $rcn-blue 1px;
+	border-radius: 15px;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+	// Content ------------------
+	.content {
+		width: 250px;
+		padding: 5%;
+		// Title ------------------
+		h6 {
+			@include link-text;
+			font-size: 15px;
+			border-bottom: none;
+			margin-bottom: 4%;
+		}
+		// Text ------------------
+		p {
+			@include sm-text;
+			font-size: 12px;
+			margin: 0;
+		}
+	}
+}
+
+// Show on hover ------------------
+.hover {
+	position: relative;
+	width: 100%;
+}
+
+.hover1:hover > .tooltip-box1{
+	opacity: 1.0;
+}
+
+.hover2:hover > .tooltip-box2{
+	opacity: 1.0;
+}
+
+.hover3:hover > .tooltip-box3{
+	opacity: 1.0;
+}
+
+.hover:hover div h6 {
+	color: $rcn-blue;
+	cursor: pointer;
+	-webkit-transition: color 0.2s; /* Safari */
+	transition: color 0.2s;
+}
+
+.hover:hover div i {
+	color: $rcn-blue;
+	cursor: pointer;
+	-webkit-transition: color 0.2s; /* Safari */
+	transition: color 0.2s;
+}
+
+// Table title ------------------
+.sub-title {
+	font-size: 13px;
+	font-family: 'regular';
+	font-weight: 400;
+	margin-bottom: 6%;
+}
+
+// Table info ------------------
+.data {
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 0;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+//Maximum width 1260px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1260px){
+
+// Lines desktop ------------------
+.page-title:after {
+	display: none;
+}
+
+.page-title2:after {
+	display: none;
+}
+
+// Lines aimation ------------------
+.page-title-mobile:after {
+	content: ""; 
+	display: block;
+	margin-top: 3px; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2-mobile:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 8px; 
+	padding-top: 0; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+// Section ------------------
+.main-container {
+	display:flex;
+	justify-content: center;
+	padding: 8% 0;
+	.row {
+		width: 80%;
+		// Text ------------------
+		.text {
+			@include three-quarters;
+			width: 100%;
+			p {
+			font-size: 18px;
+			line-height: 1.6;
+			}
+		}
+	}
+}
+
+// Table ------------------
+.row-2 {
+	display: flex;
+	justify-content: center;
+	margin-top: 4%;
+	// Border ------------------
+	.box-border {
+		height: auto;
+		width: 100%;
+		border-radius: 35px;
+		padding: 4%;
+		margin: 10% 0;
+		.title-box {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 2%;
+			// Image ------------------
+			.img-box {
+				width: 32px;
+				height: auto;
+				margin-right: 2%;
+			}
+			// Title ------------------
+			.title {
+				width: auto;
+				h4 {
+					@include tab-title;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+// Content ------------------
+.bottom-border {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	// Row ------------------
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		margin: 4% 0;
+		// Columns------------------
+		.col-1 {
+			width: 60%;
+			display:flex;
+			justify-content: flex-start;
+		}
+		.col-2 {
+			width: 40%;
+			display:flex;
+			justify-content: flex-start;
+
+		}
+	}
+}
+
+// Icons ------------------
+.fas {
+	margin-right: 12px;
+	font-size: 20px;
+	display: none;
+}
+
+.far {
+	margin-right: 12px;
+	font-size: 20px;
+	display: none;
+}
+
+// Title + text ------------------
+h6 {
+	@include tab-title;
+}
+
+// Table title ------------------
+.sub-title {
+	font-size: 10px;
+	font-weight: 400;
+	margin-bottom: 6%;
+}
+
+// Table info ------------------
+.data {
+	font-weight: 700;
+	font-size: 12px;
+}
+
+// Tooltips ------------------
+.tooltip-box1{
+	display: none;
+}
+
+.tooltip-box2{
+	display: none;
+}
+
+.tooltip-box3{
+	display: none;
+}
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+//Minimun width 1000px + Maximum width 1600px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (min-width: 1000px) and (max-width: 1600px) {
+
+// Table title ------------------	
+.sub-title {
+	font-size: 10px;
+	font-weight: 400;
+	margin-bottom: 6%;
+}
+
+// Table Info ------------------
+.data {
+	font-weight: 700;
+	font-size: 12px;
+}
+
+}

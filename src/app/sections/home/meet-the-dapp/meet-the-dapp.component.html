@@ -1,0 +1,19 @@
+<div class="main-container" [@scrollGroupAnimation]="state">
+	<div class="col-2">
+		<div class="img-box">
+			<img src="../../../../assets/img/mockup-dapp.png" alt="" [@slideInComputer]='state' id="img">
+		</div>
+	</div>
+	<div class="col-1">
+		<app-title-text>
+			<h3 class="title">Meet the decentralized marketplace</h3>
+			<h3 class="page-title" [@lineAnimationThickParameter]="{value: lineState, params: {widthLength: '8%' }}">
+			</h3>
+			<h3 class="page-title" [@lineAnimationThickParameter]="{value: lineState, params: {widthLength: '8%' }}">
+			</h3>
+			<p class="text">RCN credit marketplace is mounted on top of a state-of-the-art decentralized application (dApp), which combines the usual tools and features of digital lending platforms with all the transparency and security of the blockchain.</p>
+		</app-title-text>
+		<a href="https://rcn.loans/" target="_blank"><button id="button" class="animated button"
+			(mouseenter)="addClass('button')">ACCESS THE MARKETS</button></a>
+	</div>
+</div>

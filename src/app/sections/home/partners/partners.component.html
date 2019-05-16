@@ -1,0 +1,196 @@
+<div class="main-container" [@scrollGroupAnimation]="state">
+	<div class="fullRow">
+		<div class="col-1">
+			<app-title-text>
+				<h3 class="title">Partners</h3>
+				<h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+				<h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+				<h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+				<h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
+				<p>By integrating the Decentralized Finance ecosystem’s top companies, the RCN network is able
+					to deliver the highest performance to its users.</p>
+			</app-title-text>
+		</div>
+		<div [ngClass]="show ? 'row-show' : 'row'">
+			<table class="table">
+				<tr>
+					<th id="Ripio" (mouseenter)="addClass('Ripio')"
+						[ngClass]="activePartner.title === 'Ripio' ? 'th-back-up-left' : 'first'"
+						(click)="onClickPartner('Ripio')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-ripio.svg" alt=""></div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Ripio' ? 'h6-bold' : 'h6'">Ripio</h6>
+							</div>
+						</div>
+					</th>
+					<th [ngClass]="activePartner.title === 'Bancor Network' ? 'th-back-up' : 'first'"
+						(click)="onClickPartner('Bancor Network')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-bancor.svg" alt=""></div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Bancor Network' ? 'h6-bold' : 'h6'">
+									Bancor<br>Network </h6>
+							</div>
+						</div>
+					</th>
+					<th [ngClass]="activePartner.title === 'Kyber Network' ? 'th-back-up' : 'first'"
+						(click)="onClickPartner('Kyber Network')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-kyber.svg" alt=""></div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Kyber Network' ? 'h6-bold' : 'h6'">
+									Kyber<br>Network</h6>
+							</div>
+						</div>
+					</th>
+					<th [ngClass]="activePartner.title === 'Zeppelin' ? 'th-back-up-right' : 'first'"
+						(click)="onClickPartner('Zeppelin')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-zeppelin.svg" alt=""></div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Zeppelin' ? 'h6-bold' : 'h6'">Zeppelin</h6>
+							</div>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th [ngClass]="activePartner.title === 'Decentraland' ? 'th-back-down-left' : ''"
+						(click)="onClickPartner('Decentraland')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-decentraland.svg" alt="">
+							</div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Decentraland' ? 'h6-bold' : 'h6'">Decentraland
+								</h6>
+							</div>
+						</div>
+					</th>
+					<th [ngClass]="activePartner.title === 'Metamask' ? 'th-back' : ''"
+						(click)="onClickPartner('Metamask')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-metamask.svg" alt=""></div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Metamask' ? 'h6-bold' : 'h6'">Metamask</h6>
+							</div>
+						</div>
+					</th>
+					<th [ngClass]="activePartner.title === 'Civic' ? 'th-back' : ''" (click)="onClickPartner('Civic')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-civic.svg" alt=""></div>
+							<div class="text-box">
+								<h6 [ngClass]="activePartner.title === 'Civic' ? 'h6-bold' : 'h6'">Civic</h6>
+							</div>
+						</div>
+					</th>
+					<th [ngClass]="activePartner.title === 'Enterprise Ethereum Alliance' ? 'th-back-down-right' : ''"
+						(click)="onClickPartner('Enterprise Ethereum Alliance')">
+						<div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
+							<div class="img-box"><img src="../../../../assets/partners/logo-eea.png" alt=""></div>
+							<div class="text-box">
+								<h6
+									[ngClass]="activePartner.title === 'Enterprise Ethereum Alliance' ? 'h6-bold' : 'h6'">
+									Enterprise Ethereum<br>Alliance</h6>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</table>
+			<table class="table-mobile">
+				<tr>
+					<th class="first" (click)="onClickPartner('Ripio')">
+						<div class="img-outer">
+							<div class="img-box"><img src="../../../../assets/partners/logo-ripio.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Ripio</h6>
+							</div>
+						</div>
+					</th>
+					<th class="first" (click)="onClickPartner('Bancor Network')">
+						<div class="img-outer">
+							<div class="img-box"><img src="../../../../assets/partners/logo-bancor.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Bancor<br>Network </h6>
+							</div>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th (click)="onClickPartner('Kyber Network')">
+						<div class="img-outer">
+							<div class="img-box"><img src="../../../../assets/partners/logo-kyber.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Kyber<br>Network</h6>
+							</div>
+						</div>
+					</th>
+					<th (click)="onClickPartner('Zeppelin')">
+						<div class="img-outer">
+							<div class="img-box"><img src="../../../../assets/partners/logo-zeppelin.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Zeppelin</h6>
+							</div>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="img-outer">
+							<div class="img-box" (click)="onClickPartner('Decentraland')"><img
+									src="../../../../assets/partners/logo-decentraland.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Decentraland</h6>
+							</div>
+						</div>
+					</th>
+					<th>
+						<div class="img-outer">
+							<div class="img-box" (click)="onClickPartner('Metamask')"><img
+									src="../../../../assets/partners/logo-metamask.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Metamask</h6>
+							</div>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<div class="img-outer">
+							<div class="img-box" (click)="onClickPartner('Civic')"><img
+									src="../../../../assets/partners/logo-civic.svg" alt=""></div>
+							<div class="text-box">
+								<h6>Civic</h6>
+							</div>
+						</div>
+					</th>
+					<th>
+						<div class="img-outer">
+							<div class="img-box" (click)="onClickPartner('Enterprise Ethereum Alliance')"><img
+									src="../../../../assets/partners/logo-eea.png" alt=""></div>
+							<div class="text-box">
+								<h6>Enterprise Ethereum<br>Alliance</h6>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div [ngClass]="show ? 'showCard' : 'row2'">
+		<div class="close-icon" (click)="close()">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="content">
+			<div class="cardTitle">
+				<h4>{{activePartner.title}}</h4>
+			</div>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="img-box"><img src="{{activePartner.img}}" alt=""></div>
+			<div class="p">
+				<p>{{activePartner.text}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="padding-mobile" *ngIf="show"></div>
+</div>

@@ -1,0 +1,48 @@
+@import '../../../styles.scss'; //Styles
+
+.col-inner {
+    width: 80%;
+    .reg-text {
+        @include reg-text;
+    }
+}
+
+.title {
+    @include title;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.container {
+    width: fit-content;
+}
+
+.subtitle {
+    margin: 4% 0 1% 0;
+    @include tab-title;
+    color: $text-gray;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.reg-text {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 1400px){
+
+    .title {
+        font-size: 30px;
+    }
+
+    .col-inner {
+        width: 100%;
+        .reg-text {
+            @include reg-text;
+        }
+    }
+    
+}
+

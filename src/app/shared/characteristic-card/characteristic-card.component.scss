@@ -1,0 +1,22 @@
+@import '../../../styles.scss'; //Styles
+
+.card-border {
+  width: 25%;
+  height: auto;
+  padding: 6%;
+  border: solid white 1px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+	width: 72%;
+img {
+	width: 100%;
+} 
+h6 {
+	@include char-card-text;
+	margin-top: 6%;
+	}
+}

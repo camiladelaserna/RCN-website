@@ -1,0 +1,50 @@
+
+<nav [ngClass]="menuBlack ? 'navbar-black' : 'navbar'">
+  <div class="container">
+  <div  [ngClass]="menuBlack ? 'mobile-nav-black' : 'mobile-nav'">
+    <div class="logo-mobile animated" (click)="markAsSelected('home')" routerLink='/home'>
+      <img *ngIf="!menuBlack" class="img" src="../../../assets/img/isologotypo.svg" alt="">
+      <img *ngIf="menuBlack" class="img-black" src="../../../assets/isologotypo.svg" alt="">
+    </div>
+    <button class="bars" (click)="mobileMenu()">
+      <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+      <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+    </button>
+  </div>
+
+  <div [ngClass]="mobile ? 'mobile' : 'main-container'">
+    <div id="home" class="logo animated" (click)="markAsSelected('home')" routerLink='/home'>
+      <img *ngIf="!menuBlack" src="../../assets/img/isologotypo.svg" alt="">
+      <img *ngIf="menuBlack" src="../../assets/img/logo-negativo-2.svg" alt="">
+    </div>
+    <div class="col-tabs">
+      <ul class="tabs underline">
+        <li [ngClass]="menuBlack ? 'menu-text-black animated' : 'menu-text animated'" id="creditors" (click)="markAsSelected('creditors')" routerLink='/creditors'>
+          <a>CREDITORS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateCreditors, params: {widthLength: '30%' }}"></h3>
+        </li>
+
+        <li [ngClass]="menuBlack ? 'menu-text-black animated' : 'menu-text animated'" id="originators" (click)="markAsSelected('originators')" routerLink='/originators'>
+          <a>ORIGINATORS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateOriginators, params: {widthLength: '30%' }}"></h3>
+        </li>
+        <li [ngClass]="menuBlack ? 'menu-text-black animated' : 'menu-text animated'" id="developers" (click)="markAsSelected('developers')">
+          <a href="https://github.com/ripio" target="blank">DEVELOPERS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateDevelopers, params: {widthLength: '30%' }}"></h3>
+        </li>
+        <li [ngClass]="menuBlack ? 'menu-text-black animated' : 'menu-text animated'" id="how-it-works" (click)="markAsSelected('how-it-works')"
+          routerLink='/how-it-works'>
+          <a>HOW IT WORKS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateHowItWorks, params: {widthLength: '30%' }}"></h3>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" (click)="mobileMenu()"></div>
+  </div>
+</div>
+</nav>
+
+
+<router-outlet></router-outlet>
+
+<!-- <app-footer [@FadeIn]></app-footer> -->

@@ -1,0 +1,100 @@
+<div class="main-container" [@scrollGroupAnimation]="state">
+	<div class="background">
+		<img src="../../../../assets/img/bg_news-events.jpg" alt="">
+	</div>
+  <div class="content">
+    <div class="col-1">
+      <app-title-text>
+        <h3 class="title">News & Events</h3>
+        <h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+        <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+        <h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+        <h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
+        <p class="reg-text">As one of the Decentralized Finance ecosystem’s key stakeholders, the RCN network is regularly featured at top events and media outlets across the world.</p>
+      </app-title-text>
+    </div>
+    <div class="row">
+      <div class="carrousel">
+        <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeft]="eachContent.movement"
+          [@slideInRight]="eachContent.movement" [@opacity]="eachContent.opacity"
+          [@slideInLeftWithOpacity]="eachContent.movement" [@slideInRightWithOpacity]="eachContent.movement">
+          <a href="{{eachContent.link}}" target="blank_" class="links">
+          <div class="border">
+            <div class="content">
+              <div class="row-up">
+                <div class="title-box">
+                  <div>
+                    <h3>{{eachContent.title}}</h3>
+                  </div>
+                  <div class="line"></div>
+                </div>
+                <div>
+                  <div class="p-box">
+                    <p>{{eachContent.text}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row-down">
+                <div class="info-box">
+                  <div class="icon"><i class="{{eachContent.icon1}}"></i></div>
+                  <div>
+                    <p>{{eachContent.date}}</p>
+                  </div>
+                </div>
+                <div class="info-box">
+                  <div class="icon"><i class="{{eachContent.icon2}}"></i></div>
+                  <div>
+                    <p>{{eachContent.location}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+<!-- Prueba mobile---------------------------------------------------- -->
+        <div class="container-mobile">
+          <div class="border">
+            <div class="content" *ngFor="let eachContent of mobileContent" [@slideInLeftMobile]="eachContent.movement" [@slideInRightMobile]="eachContent.movement">
+              <div class="row-up">
+                <div class="title-box">
+                  <div>
+                    <h3>{{eachContent.title}}</h3>
+                  </div>
+                  <div class="line"></div>
+                </div>
+                <div>
+                  <div class="p-box">
+                    <p>{{eachContent.text}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row-down">
+                <div class="info-box">
+                  <div class="icon"><i class="{{eachContent.icon1}}"></i></div>
+                  <div>
+                    <p>{{eachContent.date}}</p>
+                  </div>
+                </div>
+                <div class="info-box">
+                  <div class="icon"><i class="{{eachContent.icon2}}"></i></div>
+                  <div>
+                    <p>{{eachContent.location}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back"></div>
+<!-- ------------------------------------------------- -->
+      </div>
+      <div class="second-container">
+        <div class="buttons-box">
+          <button (click)="left()"><i [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i></button>
+          <button (click)="right()"><i [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin-top: 3px; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 8px; 
+    padding-top: 0; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+// Lines mobile ------------------
+.page-title-mobile:after {
+    display: none;
+}
+
+.page-title2-mobile:after {
+    display: none;
+}
+
+// Section ------------------
+.row{
+    @include row-both;
+	// Container ------------------
+    .container {
+        @include row-both;
+		margin: 0 0 3% 0;
+		// First column ------------------
+        .col-1 {
+            @include half;
+            margin-left: 10%;
+            margin-top: 5%;
+		}
+		// Second column ------------------
+        .col-2 {
+            @include half;
+		}
+		// Image ------------------
+        .img {
+			width: 80%;
+			img {
+				margin: 15% 0 0 -30% ;
+			}
+        }
+    }
+}
+
+// Tabs container ------------------
+.tabs {
+	width: 80%;
+	// Text ------------------
+	.sm-text {
+		@include sm-text;
+	}
+	// Link ------------------
+	.link {
+		@include link-text;
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1230px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1230px){
+
+// Lines desktop ------------------
+.page-title:after {
+	display: none;
+}
+
+.page-title2:after {
+	display: none;
+}
+
+// Line animation ------------------
+.page-title-mobile:after {
+	content: ""; 
+	display: block;
+	margin-top: 3px; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2-mobile:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 8px; 
+	padding-top: 0; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+// Section ------------------
+.row{
+	@include row-both;
+	// Container ------------------
+	.container {
+		@include row-around;
+		margin: 3% 0;
+		display: block;
+		// First column ------------------
+		.col-1 {
+			margin-left: 10%;
+			margin-top: 5%;
+			width: 80%;
+			.text {
+				font-size: 18px;
+				line-height: 1.6;
+			}
+		}
+		// Second column ------------------
+		.col-2 {
+			margin-top: 10%;
+			@include half;
+			width: 90%;
+		}
+		.img {
+			width: 100%;
+			img {
+				margin: 0;
+			}
+		}
+	}
+}
+
+// Tabs container ------------------
+.tabs {
+	width: 100%;
+	.sm-text {
+		@include sm-text;
+	}
+}
+
+}
+

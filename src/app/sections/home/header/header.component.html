@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="content-back">
+		<div class="content" *ngFor="let activeContent of activeContent" [@fadeInImage]="activeContent.fadeIn">
+			<h2 class="main-subtitle">WELCOME TO...</h2>
+			<h1 class="main-title">{{activeContent.title0}} <br *ngIf="activeContent.title0 != ''">
+				{{activeContent.title}}
+			</h1>
+			<p class="main-text">RCN is an open global credit network that connects creditors, financial institutions, fintech companies and Decentralized Finance service providers on the blockchain, to create frictionless, transparent and borderless debt markets.
+			</p>
+			<button id="button" class="button animated btn-3" href="#howItWorks"
+				(click)="navigate()"> <span> SEE HOW IT WORKS</span></button>
+			<div class="second-container">
+				<div class="buttons-box">
+					<button id="button1" class="arrow" (click)="left()"><i
+							[ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i>PREVIOUS</button>
+					<button id="button2" class="arrow" (click)="right()">NEXT<i
+							[ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-right">
+		<div class="img-box" *ngFor="let activeContent of activeContent">
+			<img src="{{activeContent.img}}" alt="" [@slideInLeftImages]="activeContent.selected">
+		</div>
+	</div>
+	<div class="col-right-mobile">
+		<div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeftImages]="activeContent.selected">
+			<img src="{{activeContent.img}}" alt="">
+		</div>
+	</div>
+</div>

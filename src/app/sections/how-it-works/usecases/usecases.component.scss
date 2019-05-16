@@ -1,0 +1,231 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+	content: ""; 
+	display: block;
+	margin: 0; 
+	border-bottom: 3px solid blue; 
+	margin-top: 3px;
+}
+
+
+.page-title2:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 8px; 
+	padding-top: 0; 
+	border-bottom: 3px solid blue; 
+}
+
+// Section ------------------
+.main-container {
+	display:flex;
+	justify-content: center;
+	margin: 5% 0;
+	.row {
+		width: 80%;
+		// Text ------------------
+		.text {
+			width: 100%;
+			p {
+				font-size: 16px;
+				line-height: 1.6;
+			}
+		}
+	
+	}
+}
+
+// Image desktop ------------------
+.img-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	.img-box {
+		width: 70%;
+		img {
+			width: 100%
+		}
+	}
+}
+
+// Image mobile ------------------
+.img-box-mobile {
+  	display: none;
+}
+
+// References title ------------------
+.title-ref {
+	margin-top: 5%;
+	margin-bottom: 0%;
+	@include char-card-text;
+	color: gray;
+	font-size: 18px;
+	font-weight: 700;
+	display: flex;
+	justify-content: flex-start;
+	.fa-info-circle {
+		margin-left: 0.5%;
+	}
+}
+
+// References content ------------------
+.row-ref {
+	margin-bottom: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	// First column ------------------
+	.col-1-ref {
+		width: 45%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.ref-1 {
+		width: 45%;
+		}
+		.ref-2 {
+		width: 45%;
+		}
+	}
+	// Second column ------------------
+	.col-2-ref {
+		width: 45%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.ref-3 {
+		width: 45%;
+		}
+		.ref-4 {
+		width: 45%;
+		}
+	}
+}
+
+// Reference ------------------
+.ref-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 8% 0;
+	.ref {
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		// Title ------------------
+		h6 {
+		@include link-text;
+		font-weight: 400;
+		}
+	}
+	// Image ------------------
+	.ref-img-box {
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		.ref-img {
+			margin-left: 10%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1000px){
+
+// Section ------------------
+.main-container {
+	display:flex;
+	justify-content: center;
+	margin: 10% 0;
+	.row {
+		width: 80%;
+		// Text ------------------
+		.text {
+			width: 100%;
+			.subtitle {
+				margin-top: 10%;
+			}
+			p {
+				font-size: 16px;
+				line-height: 1.6;
+			}
+		}
+	}
+}
+
+// Image desktop ------------------
+.img-box {
+  display: none;
+}
+
+// Image mobile ------------------
+.img-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 10% 0;
+	.img-box-mobile {
+		display: block;
+		width: 100%;
+		img {
+			width: 100%
+		}
+	}
+}
+
+// Reference title ------------------
+.title-ref {
+	margin-top: 20%;
+	margin-bottom: 2%;
+	@include char-card-text;
+	color: gray;
+	font-size: 18px;
+	font-weight: 700;
+	display: flex;
+	justify-content: flex-start;
+	.fa-info-circle {
+		margin-left: 0.5%;
+	}
+}
+
+// References content ------------------
+.row-ref {
+	.col-1-ref {
+		width: 100%;
+	}
+	.col-2-ref {
+		width: 100%;
+	}
+}
+
+// Reference ------------------
+.ref-box {
+	margin: 12% 0;
+	.ref {
+		width: 70%;
+		justify-content: flex-start;
+		h6 {
+			font-size: 12px;
+		}
+	}
+	.ref-img-box {
+		width: 30%;
+		justify-content: flex-end;
+	}
+}
+
+}
+

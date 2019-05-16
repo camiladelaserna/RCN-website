@@ -1,0 +1,70 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin: 0; 
+	border-bottom: 3px solid blue; 
+	margin-bottom: 3px;
+}
+
+// Section ------------------
+.phrase {
+	display: flex;
+	justify-content: center;
+	padding: 8% 0;
+	background-color: rgb(245, 245, 245);
+		.row {
+		width: 100%;
+		margin-left: 10%;
+		// Text ------------------
+		.text {
+			@include half;
+			.title {
+				@include subtitle;
+			}
+				
+		}
+	}
+}
+
+// Mail ------------------
+.mail {
+	@include link-text;
+	font-size: 18px;
+	display: inline-block;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1000px){
+
+// Section ------------------
+.phrase {
+	display: flex;
+	justify-content: center;
+	margin: 5% 0 0 0;
+	.row {
+		width: 80%;
+		margin-left: 0;
+		padding: 10% 0;
+		.text {
+			@include half;
+			width: 100%;
+			line-height: 1.6;
+			// Title ------------------
+			.title {
+				@include subtitle;
+			}
+			// Text ------------------
+			.text-p {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+}

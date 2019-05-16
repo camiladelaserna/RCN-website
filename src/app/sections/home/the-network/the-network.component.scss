@@ -1,0 +1,195 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin-top: 3px; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 8px; 
+    padding-top: 0; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+// Line mobile ------------------
+.page-title-mobile:after {
+    display: none;
+}
+
+.page-title2-mobile:after {
+    display: none;
+}
+
+// Section ------------------
+.row{
+    @include row-both;
+    padding: 4% 0 8% 0;
+    .container {
+        @include row-around;
+        margin: 3% 0;
+        // First column ------------------
+        .col-1 {
+            @include half;
+            margin-left: 10%;
+            margin-top: 4%;
+            // Title ------------------
+            .title {
+                margin-bottom: 8px;
+            }
+        }
+        // Second column ------------------
+        .col-2 {
+            @include half;
+            // Image ------------------
+            .img {
+                width: 80%;
+                img {
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}
+
+
+
+// Tabs container ------------------
+.tabs {
+    width: 80%;
+    // Tab text ------------------
+    .sm-text {
+        @include sm-text;
+        line-height: 1.6;
+    }
+    // Link ------------------
+    .link {
+        @include button-text;
+        color: $rcn-blue;
+        text-decoration: none;
+    }
+    // Link hover ------------------
+    .link:hover {
+       opacity: 0.5;
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1310px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1310px){
+
+// Lines desktop ------------------
+.page-title:after {
+    display: none;
+}
+
+.page-title2:after {
+    display: none;
+}
+
+// Line animation ------------------
+.page-title-mobile:after {
+    content: ""; 
+    display: block;
+    margin-top: 3px; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2-mobile:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 8px; 
+    padding-top: 0; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+// Section ------------------
+.row {
+    @include row-both;
+    .container {
+        @include row-around;
+        margin: 3% 0;
+        display: block;
+        // First column ------------------
+        .col-1 {
+            @include half;
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            width: 80%;
+            // Title ------------------
+            .title {
+                margin-bottom: 2%;
+            }
+            // Text ------------------
+            .text {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+        }
+        // Second column ------------------
+        .col-2 {
+            @include half;
+            width: 80%;
+            margin-bottom: 5%;
+            margin-left: 10%;
+            // Image ------------------
+            .img {
+                width: 100%;
+                margin-left: -25px;
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// Tabs container ------------------
+.tabs {
+    width: 100%;
+    // Text ------------------
+    .sm-text {
+        @include sm-text;
+    }
+}
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Minimum width 800px + Maximum width 1310px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (min-width: 800px) and (max-width: 1310px) {
+
+// Section ------------------
+.row{
+    .container {
+        // Second column ------------------
+        .col-2 {
+            width: 100%;
+            margin-bottom: 5%;
+            margin-left: 0%;
+            display: flex;
+            justify-content: center;
+            // Image ------------------
+            .img {
+                width: 60%;
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+}

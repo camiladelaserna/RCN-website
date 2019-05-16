@@ -1,0 +1,203 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+	content: ""; 
+	display: block;
+	margin: 0; 
+	border-bottom: 3px solid white; 
+	margin-bottom: 3px;
+}
+
+// Section ------------------
+.main-container {
+    padding: 8% 0;
+    background-color: $rcn-blue;
+	border-radius: 50px 50px 0 0;
+	background-image: $gradient-diag;
+	// Content ------------------
+	.phrase {
+		display: flex;
+		justify-content: center;
+		.row {
+			width: 80%;
+			.text {
+				@include three-quarters;
+				// Title ------------------
+				.title {
+					@include subtitle;
+					color: white;
+					margin-bottom: 1%;
+				}
+				.subtitle {
+					margin: 0;
+					padding: 0;
+					display: none;
+				}
+				// Text ------------------
+				.text-p {
+					color: white;
+					p {
+						margin: 0;
+					}
+				}
+		
+			}
+		}
+	}
+}
+
+// Steps ------------------
+.row-2 {
+	@include row-center;
+	margin-top: 3%;
+	.col {
+		width: 65%;
+		display: flex;
+		justify-content: space-between;
+		// Container ------------------
+		.wrapper {
+			width: 22%;
+			position: relative;
+			// Number ------------------
+			.box-number {
+				margin: 0;
+				padding: 0;
+				.number {
+					font-size: 100px;
+					color: $rcn-blue;
+					margin: 0;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 400;
+					margin-left: -10%;
+				}
+			}
+			// Image ------------------
+			.box-img {
+				width: 40%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+			// Content ------------------
+			.content {
+				margin-top: 0%;
+				// Title------------------
+				h6 {
+					margin-top: 0;
+					@include tab-title;
+					color: white;
+					font-weight: 700;
+				}
+				// Text ------------------
+				p {
+					@include tab-title;
+					letter-spacing: 0;
+					line-height: 1.6;
+					font-weight: 400;
+					color: white;
+					margin-top: 4%;
+				}
+				// Link ------------------
+				a {
+					@include tab-title;
+					font-weight: 400;
+					color: white;
+					margin-top: 4%;
+				}
+			}
+		
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------
+//Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 1000px){
+
+// Section ------------------
+.main-container {
+	margin-top: 5%;
+	padding: 10% 0;
+	background-color: $rcn-blue;
+	border-radius: 50px 50px 0 0;
+	// Content ------------------
+	.phrase {
+		display: flex;
+		justify-content: center;
+		.row {
+			width: 80%;
+			.text {
+				width: 100%;
+				// Title ------------------
+				.title {
+					@include subtitle;
+					color: white;
+					margin: 5% 0;
+				}
+				// Text ------------------
+				.text-p {
+					color: white;
+					font-size: 18px;
+					line-height: 1.6;
+					margin: 10% 0 5% 0;
+				}
+        	}
+    	}
+	}
+}
+
+// Steps ------------------
+.row-2 {
+	@include row-center;
+	margin-top: 3%;
+	.col {
+		width: 65%;
+		display: block;
+		// Container ------------------
+		.wrapper {
+			width: 100%;
+			// Image ------------------
+			.box-img {
+				width: 30%;
+				margin-top: 0%;
+				margin-bottom: 40%;
+				position: absolute;
+				top: -100%;
+				left: 0;
+			}
+			// Number ------------------
+			.box-number {
+				position: absolute;
+				top: -100%;
+				left: 0;
+				.number {
+					margin-bottom: 20px;
+				}
+			}
+			// Content ------------------
+			.content {
+				margin-top: 60%;
+				h6 {
+					margin-top: 4%;
+					@include tab-title;
+					color: white;
+					font-weight: 700;
+				}
+				// Text ------------------
+				p {
+					@include tab-title;
+					font-weight: 400;
+					color: white;
+					margin: 2% 0 20% 0;
+					line-height: 1.6;
+				}
+			}
+		}
+	}
+}
+
+}

@@ -1,0 +1,39 @@
+<div class="main-container" [@scrollGroupAnimation]="state">
+	<div class="col-1">
+		<app-title-text>
+			<h3 class="title">Characteristics</h3>
+			<h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+			<h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+			<h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+			<h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
+			<p class="reg-text">Blockchain technology allows the RCN network to outperform existing lending solutions by creating a frictionless, transparent and completely borderless alternative to traditional debt markets.</p>
+		</app-title-text>
+	</div>
+	<div class="row-2">
+		<div class="row-inner">
+			<div class="card" *ngFor="let characteristic of characteristics" [@selected]="characteristic.selected"
+				[@opacity]="characteristic.opacity">
+				<a (mouseleave)="updateNoSelections()" (mouseenter)="updateCharacteristics(characteristic.title)">
+					<div [ngClass]="characteristic.expanded ? 'card-border-expanded' : 'card-border'">
+						<div class="content-box">
+							<div [ngClass]="characteristic.expanded ? 'content-expanded' : 'content'">
+								<div [ngClass]="characteristic.expanded ? 'img-box-expanded' : 'img-box'">
+									<img src={{characteristic.img}} alt="">
+								</div>
+								<div class="h6">
+									<h6>{{characteristic.title}}</h6>
+								</div>
+								<div *ngIf='characteristic.expanded'>
+									<div class="line"></div>
+									<div class="text">
+										<p>{{characteristic.text}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

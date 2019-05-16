@@ -1,0 +1,16 @@
+
+.anim-cubes-animation {
+  
+    &.hidden {
+        height: 0;
+    }
+    
+    @media (min-width: 1230px) and (max-width: 1400px) {
+        margin-left: 0;
+    }
+
+    @media (min-width: 1401px) {
+        margin-left: -100px;
+    }
+
+}

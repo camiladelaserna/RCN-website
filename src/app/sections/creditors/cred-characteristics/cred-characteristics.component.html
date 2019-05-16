@@ -1,0 +1,27 @@
+<div class="row-2">
+	<div class="row-inner">
+		<div class="card" *ngFor="let characteristic of characteristics" [@selected]="characteristic.selected"
+			[@opacity]="characteristic.opacity">
+			<a (mouseleave)="updateNoSelections()" (mouseenter)="updateCharacteristics(characteristic.title)">
+				<div [ngClass]="characteristic.expanded ? 'card-border-expanded' : 'card-border'">
+					<div class="content-box">
+						<div [ngClass]="characteristic.expanded ? 'content-expanded' : 'content'">
+							<div [ngClass]="characteristic.expanded ? 'img-box-expanded' : 'img-box'">
+								<img src={{characteristic.img}} alt="">
+							</div>
+							<div class="h6">
+								<h6>{{characteristic.title}}</h6>
+							</div>
+							<div *ngIf='characteristic.expanded'>
+								<div class="line"></div>
+								<div class="text">
+									<p>{{characteristic.text}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

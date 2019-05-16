@@ -1,0 +1,6 @@
+<app-animated-cubes-animation
+  *ngFor="let key of animationKeys"
+  [key]="key"
+  [current]="currentAnimation === key"
+  (finishedPlaying)="animationFinished()">
+</app-animated-cubes-animation>

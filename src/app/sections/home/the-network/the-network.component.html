@@ -1,0 +1,50 @@
+<div class="row" [@scrollGroupAnimation]="state">
+	<div class="container">
+		<div class="col-1">
+			<app-title-text>
+				<h3 class="title">The Network</h3>
+				<h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+				<h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+				<h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+				<h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
+				<p class="text">In an increasingly globalized world, RCN harnesses blockchain technology to bridge
+					credit supply
+					and demand across borders, creating a new ecosystem for decentralized debt products.</p>
+			</app-title-text>
+			<div class="tabs">
+				<mat-tab-group (selectedTabChange)="tabChanged($event)">
+					<mat-tab>
+						<ng-template mat-tab-label ng-click="onClickMe()">
+							CREDITORS
+						</ng-template>
+						<p class="sm-text">The decentralized marketplace allows lenders to reach the most profitable
+							debt
+							markets around the world, no matter where they are.
+						</p>
+						<a href="" routerLink='/creditors' class="link">> LEARN MORE</a>
+					</mat-tab>
+					<mat-tab>
+						<ng-template mat-tab-label ng-click="onClickMe()">
+							ECOSYSTEM
+						</ng-template>
+						<p class="sm-text">The network connects credit markets’ stakeholders with key Decentralized Finance service providers, including ID verifiers, scoring agents and exchanges.</p>
+						<a href="" routerLink='/how-it-works' class="link">> LEARN MORE</a>
+					</mat-tab>
+					<mat-tab>
+						<ng-template mat-tab-label ng-click="onClickMe()">
+							ORIGINATORS
+						</ng-template>
+						<p class="sm-text">The platform provides financial institutions, fintech lending companies and blockchain startups with access to global credit supply.</p>
+						<a href="" routerLink='/originators' class="link">> LEARN MORE</a>
+					</mat-tab>
+				</mat-tab-group>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="img">
+				<!--<img src="../../../../assets/img/home-creditors-grilla.svg" alt="">-->
+				<app-animated-cubes [currentTab]="currentTab" [shown]="lineState === 'show'"></app-animated-cubes>
+			</div>
+		</div>
+	</div>
+</div>

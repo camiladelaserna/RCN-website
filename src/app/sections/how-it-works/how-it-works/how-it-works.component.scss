@@ -1,0 +1,19 @@
+@import '../../../../styles.scss'; //Styles
+
+.sticky {
+    position: fixed;
+}
+
+.content {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    margin-top: 500px;
+    @include shadowElementUp;
+}
+
+@media (max-width: 768px){ 
+    .content {
+        margin-top: 1113px;
+    }
+}

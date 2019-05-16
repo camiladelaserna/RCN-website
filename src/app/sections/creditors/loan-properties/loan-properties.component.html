@@ -1,0 +1,79 @@
+<div class="main-container" [@scrollGroupAnimation]="state">
+	<div class="row">
+		<div class="text">
+			<app-title-text>
+				<h3 class="title">Loan Properties</h3>
+				<h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+				<h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+				<h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+				<h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
+				<p>To provide its creditors with the highest transparency standards, the RCN network provides a wealth of data for
+					each of
+					its loans.</p>
+			</app-title-text>
+		</div>
+		<div class="row-2">
+			<div class="box-border">
+				<div class="box">
+					<div class="title-box">
+						<div class="img-box">
+							<img src="../../../../assets/isologo.svg" alt="">
+						</div>
+						<div class="title">
+							<h4>LOAN OVERVIEW</h4>
+						</div>
+					</div>
+					<div class="bottom-border" *ngFor="let content of content">
+						<div class="wrapper">
+							<div class="col hover">
+								<div><i class="{{content.icon}}"></i></div>
+								<div class="hover1">
+									<h6 class="sub-title">{{content.title}}</h6>
+									<h6 class="data">{{content.data}}</h6>
+									<div class="tooltip-box1">
+										<div class="tooltip-box">
+											<div class="content">
+												<h6>{{content.tooltipTitle}}</h6>
+												<p>{{content.tooltip}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col hover">
+								<div><i class={{content.icon2}}></i></div>
+								<div class="hover2">
+									<h6 class="sub-title">{{content.title2}}</h6>
+									<h6 class="data">{{content.data2}}</h6>
+									<div class="tooltip-box2">
+										<div class="tooltip-box">
+											<div class="content">
+												<h6>{{content.tooltipTitle2}}</h6>
+												<p>{{content.tooltip2}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col hover">
+								<div><i class={{content.icon3}}></i></div>
+								<div class="hover3">
+									<h6 class="sub-title">{{content.title3}}</h6>
+									<h6 class="data">{{content.data3}}</h6>
+									<div class="tooltip-box3">
+										<div class="tooltip-box">
+											<div class="content">
+												<h6>{{content.tooltipTitle3}}</h6>
+												<p>{{content.tooltip3}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

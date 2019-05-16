@@ -1,0 +1,181 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin-bottom: 3px; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+// Section ------------------
+.main-container {
+	display: flex;
+	justify-content: center;
+	background-color: $gray;
+	padding: 8% 0;
+}
+
+// Content column ------------------
+.col-1 {
+	width: 55%;
+	margin-right: 5%;
+	// Title ------------------
+	.title {
+		@include subtitle;
+		font-size: 30px;
+		margin-top: 10%;
+		margin-bottom: 1%;
+	}
+	// Text------------------
+	p {
+		margin: 5% 0;
+	}
+	// CTA Button ------------------
+	.button {
+		border: solid $rcn-blue 1px;
+		margin: 0;
+		padding: 20px 30px;
+		border-radius: 10px;
+		width: auto;
+		overflow: visible;
+		background: transparent;
+		@include button-text;
+		color: $rcn-blue;
+		cursor: pointer;
+		-webkit-transition: font-weight 0.2s; /* Safari */
+		transition: font-weight 0.2s;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
+		-webkit-transition: color 0.2s; /* Safari */
+		transition: color 0.2s;
+		outline: white;
+		animation-duration: 0.5s;
+		
+	}
+	// CTA Button hover ------------------
+	.button:hover {
+		background-color: $rcn-blue;
+		color: white;
+		font-weight: 700;
+		-webkit-transition: font-weight 0.2s; /* Safari */
+		transition: font-weight 0.2s;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
+		-webkit-transition: color 0.2s; /* Safari */
+		transition: color 0.2s;
+		@include shadowElement;
+	}
+}
+
+// Image column ------------------
+.col-2 {
+	width: 45%;
+	margin-left: 10%;
+	.img-box {
+		width: 120%;
+		height: auto;
+		img {
+			width: 100%;
+			margin-left: -60%;
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
+
+
+@media (max-width: 1000px){
+
+// Section ------------------	
+.main-container {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	flex-direction: column-reverse;
+	padding: 10% 0 18% 0;
+}
+
+// Content column ------------------	
+.col-1 {
+	width: 80%;
+	margin-top: 5%;
+	margin-right: 10%;
+	// Title ------------------	
+	.title {
+		@include subtitle;
+		margin-top: 10%;
+		margin-bottom: 2%;
+	}
+	// Text ------------------	
+	.text {
+		margin: 5% 0;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+	// CTA Button ------------------	
+	.button {
+		padding: 14px 26px;
+		margin: 2% 0;
+		font-size: 12px;
+
+	}
+}
+
+// Focus ------------------	
+a:focus {
+	outline: white;
+}
+
+button:focus {
+	outline: white;
+}
+
+.col-1 {
+	.button:hover {
+		background-color: $rcn-blue;
+		color: white ;
+		font-weight: 700;
+		padding: 14px 26px;
+		margin: 2% 0;
+		font-size: 12px;
+		box-shadow: none;
+	}
+}
+
+
+// Image column ------------------	
+.col-2 {
+	width: 90%;
+	margin-left: 0;
+	margin-top: 5%;
+	overflow: hidden;
+	// Image ------------------	
+	.img-box {
+		width: 120%;
+		height: auto;
+		img {
+			width: 100%;
+			margin-left: 0%;
+			margin-right: -47%;
+		}
+	}
+}
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+// Minimum width 800px + Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (min-width: 800px) and (max-width: 1000px) {
+
+	// Image column ------------------	
+	.col-2 {
+		width: 70%
+	}
+
+
+}

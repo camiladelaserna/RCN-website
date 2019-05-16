@@ -1,0 +1,301 @@
+@import '../../../../styles.scss'; //Styles
+
+// Line animation ------------------
+.page-title:after {
+    content: ""; 
+    display: block;
+	margin: 0; 
+	margin-top: 3px; 
+    border-bottom: 3px solid white; 
+}
+
+
+.page-title2:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 8px; 
+    padding-top: 0; 
+    border-bottom: 3px solid white; 
+}
+
+// Line mobile ------------------
+.page-title-mobile:after {
+	display: none;
+}
+
+
+.page-title2-mobile:after {
+	display: none;
+}
+
+// Section ------------------
+.main-container {
+	background-image: $gradient-diag;
+  	height: auto;
+	padding: 8% 0 6% 0;
+	max-height: 570px;
+	.col-1 {
+		@include half;
+		margin-left: 10%;
+		.title {
+			color: white;
+			font-size: 45px;
+		}
+		.reg-text {
+			color: white;
+		}
+	}
+}
+
+// Cards ------------------
+.row-2 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	margin: 5% 0;
+	// Row ------------------
+	.row-inner {
+		width: auto;
+		display: flex;
+		justify-content: space-around;
+		// Card ------------------
+		.card {
+			width: 32%;
+			height: auto;
+			padding: 1%;
+			margin: 0 4%;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			.card-border {
+				border: solid white 1.2px;
+				border-left: solid white 1.2px;
+				border-radius: 15px;
+				-webkit-transition: border-radius 0.2s; /* Safari */
+				transition: border-radius 0.2s;
+			}
+			// Card expanded ------------------
+			.card-border-expanded {
+				border: solid white 1.2px; 
+				border-radius: 15px;
+				background-color: $rcn-blue;
+				@include shadowElement;
+				-webkit-transition: box-shadow 0.2s; /* Safari */
+				transition: box-shadow 0.2s;
+				-webkit-transition: border-radius 0.2s; /* Safari */
+				transition: border-radius 0.2s;
+				-webkit-transition: background-image 0.2s; /* Safari */
+				transition: background-image 0.2s;
+				// Content ------------------
+				.content-box {
+					width: 220px;
+					height: 220px;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					// Content expanded ------------------
+					.content-expanded {
+						width: 80%;
+						height: auto;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: flex-start;
+						align-items: center;
+						margin: 3%;
+						// Image expanded ------------------
+						.img-box-expanded {
+							width: 25%;
+							margin-right: 60%;
+							margin-bottom: 2%;
+							img {
+								width: 100%;
+							}
+						}
+						// Title ------------------
+						.h6 {
+							@include char-card-text;
+							font-family: 'semi';
+							margin-bottom: 1%;
+						}
+						// Line ------------------
+						.line {
+							width: 8%;
+							border-bottom: solid white 2px;
+							margin-top: 2%;
+						}
+						// Text ------------------
+						.text {
+							opacity: 1;
+							@include char-card-text;
+							font-size: 12px;
+							margin-top: 6%;
+							margin-bottom: 0;
+							-webkit-transition: opacity 3s; /* Safari */
+							transition: opacity 3s;
+						}
+					}
+				}
+			}
+		}
+  	}
+}
+
+// Card content ------------------
+.content-box {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	.content {
+		width: 45%;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		// Image ------------------
+		.img-box {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		// Title ------------------
+		.h6 {
+			display: flex;
+			justify-content: center;
+			h6 {
+				@include char-card-text;
+				margin-top: 8%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------
+//Maximum width 910px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 910px){
+
+// Lines desktop ------------------
+.page-title:after {
+	display: none;
+}
+
+.page-title2:after {
+	display: none;
+}
+
+// Lines mobile ------------------
+.page-title-mobile:after {
+	content: ""; 
+	display: block;
+	margin-top: 3px; 
+	border-bottom: 3px solid white; 
+}
+
+
+.page-title2-mobile:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 8px; 
+	padding-top: 0; 
+	border-bottom: 3px solid white; 
+}
+
+// Section ------------------
+.main-container {
+	background-image: $gradient;
+	height: auto;
+	padding: 15% 0;
+	max-height: 900px;
+	.col-1 {
+		width: 80%;
+		.title {
+			color: white;
+			margin-bottom: 2%;
+		}
+		.reg-text {
+			color: white;
+			font-size: 18px;
+			line-height: 1.6;
+		}
+	}
+}
+	
+// Cards ------------------	
+.row-2 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 5%;
+	// Row ------------------	
+	.row-inner {
+		width: 40%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2%;
+		// Card ------------------	
+		.card {
+			width: 100%;
+			height: auto;
+			padding: 1%;
+			margin: 0 4%;
+			display: flex;
+			justify-content: center;
+			.card-border {
+				width: auto;
+				height: auto;
+				padding: 4%;
+				margin: 5% 0;
+				border: solid white 1.2px;
+				border-radius: 15px;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+// Content ------------------
+.content-box {
+	width: 150px;
+	height: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	.content{
+		// Image ------------------
+		.img-box {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		// Title ------------------
+		.h6 {
+			display: flex;
+			justify-content: center;
+			h6 {
+				@include char-card-text;
+				margin-top: 8%;
+				text-align: center;
+			}
+		} 
+	}
+}
+
+}	
+
+

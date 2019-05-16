@@ -1,0 +1,35 @@
+<div class="main-container" [@scrollGroupAnimation]="state">
+	<div class="phrase">
+		<div class="row">
+			<div class="text">
+				<app-title-text>
+					<h3 class="title">Getting Started</h3>
+					<h3 class="page-title"
+						[@lineAnimationThickParameter]="{value: lineState, params: {widthLength: '15%' }}"></h3>
+					<h3 class="page-title"
+						[@lineAnimationThickParameter]="{value: lineState, params: {widthLength: '15%' }}"></h3>
+					<p class="text-p">RCN blockchain-based lending eliminates unnecessary friction,
+						allowing Creditors to start lending in three easy steps.</p>
+				</app-title-text>
+			</div>
+		</div>
+	</div>
+	<div class="row-2">
+		<div class="col">
+			<div class="wrapper" *ngFor="let content of content">
+				<div class="box-img">
+					<img src="{{content.icon}}" alt="">
+				</div>
+				<div class="box-number">
+					<p class="number">{{content.number}}</p>
+				</div>
+				<div class="content">
+					<h6>{{content.title}}</h6>
+					<p>{{content.data}}<a href="{{content.target1}}"
+					target="_blank">{{content.data2}}</a>{{content.data3}}<a href="{{content.target2}}"
+					target="_blank">{{content.data4}}</a>{{content.data5}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

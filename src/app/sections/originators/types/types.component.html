@@ -1,0 +1,45 @@
+<div class="row" [@scrollGroupAnimation]="state">
+	<div class="container">
+		<div class="col-1">
+			<app-title-text>
+				<h3 class="title">Types</h3>
+				<h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+				<h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+				<h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+				<h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
+				<p class="text">Either they belong to the traditional finance world, the fintech industry or the blockchain ecosystem, the RCN network supports the funding needs of every kind of Originator.
+				</p>
+			</app-title-text>
+			<div class="tabs">
+				<mat-tab-group (selectedTabChange)="tabChanged($event)">
+					<mat-tab>
+						<ng-template mat-tab-label>
+							FINANCE
+						</ng-template>
+						<p class="sm-text">On the decentralized marketplace financial institutions can offer their issued loans to Creditors from around the world, removing them from their balance sheets and earning liquidity.
+						</p>
+					</mat-tab>
+					<mat-tab>
+						<ng-template mat-tab-label>
+							FINTECH
+						</ng-template>
+						<p class="sm-text">RCN allows fintech lending companies to access blockchain-based global debt markets, without dealing with the complexities of distributed ledger technologies.</p>
+					</mat-tab>
+					<mat-tab>
+						<ng-template mat-tab-label>
+							BLOCKCHAIN
+						</ng-template>
+						<p class="sm-text">By integrating themselves to the network, blockchain startups can provide their users with liquidity during crypto bear markets or enable them to perform leveraged operations.</p>
+					</mat-tab>
+				</mat-tab-group>
+				<a href="" routerLink='/how-it-works' class="link">> SEE HOW IT WORKS </a>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="img">
+				<!--<img src="../../../../assets/img/grafico-muestra.svg" alt="">-->
+				<app-animated-cubes [currentTab]="currentTab" [shown]="lineState === 'show'"></app-animated-cubes>
+			</div>
+		</div>
+	</div>
+</div>
